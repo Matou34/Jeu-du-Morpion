@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morpion</title>
+    <!--------bootsrap------->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"   
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+    crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+    crossorigin="anonymous"></script> 
+    <!--/******************CSS*********************************/-->
+    <link rel="stylesheet" href="./CSS/morpion.css">
+    <!--/******************JS*********************************/-->
+    <script src="./JS/morpion.js" defer></script>
+    <script src="./JS/script.js" defer></script>
+        <!-- JQUERY -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <main class="container_morpion">
+        <section id="Container_nom">
+            <div>
+                <p class="Nom" id="Blaze">Joueur 1</p>
+            </div>
+            <div>
+                <p class="Nom" id="Blaze3"></p>
+            </div>
+            <div>
+                <p class="Nom" id="Blaze2">Joueur 2</p>
+            </div>    
+        </section>
+    
+        <section class="container_boutton">
+            <span class="span1 span" id="b1"></span>
+            <span class="span1 span" id="b2"></span>
+            <span class="span1 span" id="b3"></span>
+            <span class="span2 span" id="b4"></span>
+            <span class="span2 span" id="b5"></span>
+            <span class="span2 span" id="b6"></span>
+            <span class="span3 span" id="b7"></span>
+            <span class="span3 span" id="b8"></span>
+            <span class="span3 span" id="b9"></span>    
+        </section>
+    
+        <section class="container_resultat">
+            <h2>
+                <span id="LeGagn">Le gagn</span><span id="antEst">ant est:</span>
+            </h2>
+            <div class="Container_nom_gagant">
+                <p class="Nom_gagnant"></p>
+            </div>
+            <p class="text"></p>
+            <a href="./morpion.html"><button class="Rejouer">Rejouer</button></a>
+
+        </section>
+    </main>
+
+</body>
+</html>
