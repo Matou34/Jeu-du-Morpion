@@ -169,21 +169,11 @@ function verifierCombinaisons() {
     if (combinaisonTrouverJ1) {
         ResultatMorpion(nomJ1 + " !", "2", "3");
         affichage('#d6da05', PersoJoueur1, "#ef2121");
-        // color = document.querySelector(".Nom_gagnant").style.color = '#d6da05';
-        // test = PersoJoueur1
-        // phraseDuPersonnage = phraseCulte[test];
-        // document.querySelector('.text').innerHTML = phraseDuPersonnage;
-        // document.querySelector('.text').style.color = "#ef2121";
         return;
     }
     else if (combinaisonTrouverJ2) {
         ResultatMorpion(nomJ2 + " !", "3", "2");
         affichage('#d00c02', PersoJoueur2, "#ef7021");
-        // color = document.querySelector(".Nom_gagnant").style.color = '#d00c02' ; 
-        // test = PersoJoueur2
-        // phraseDuPersonnage = phraseCulte[test];
-        // document.querySelector('.text').innerHTML = phraseDuPersonnage;
-        // document.querySelector('.text').style.color = "#ef7021";
         return;
     }
 }
@@ -192,7 +182,6 @@ function verifierCombinaisons() {
         color = document.querySelector(".Nom_gagnant").style.color = '#ef7021' ;  
         document.querySelector('.text').innerHTML = "LOOSER !!!";
         document.querySelector('.text').style.color = "#ef7021";
-    
         return;
 }
 }
@@ -210,7 +199,7 @@ function ResultatMorpion(resultat, numeroJ1, numeroJ2) {
     document.querySelector(".Nom_gagnant").textContent = resultat ;
     document.querySelector(".container_resultat").classList.toggle('d-none');
     document.querySelector(".Nom1").classList.toggle('d-none');
-    document.querySelector('.ImageJ1').src="./image/Personnage/" + PersoJoueur1 + numeroJ1 + ".png"
+    document.querySelector('.ImageJ1').src="./image/Personnage/" + PersoJoueur1 + numeroJ1 + ".png";
     document.querySelector('.ImageJ2').src="./image/Personnage/" + PersoJoueur2 + numeroJ2 + ".png"
 }
 
