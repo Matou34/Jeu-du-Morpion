@@ -1,3 +1,4 @@
+/* police */
 @font-face {
     font-family: "Sauyan_sans";
     src: local("Sauyan_sans"), url("../saiyan_sans/Saiyan-Sans.ttf") format("opentype") tech(color-COLRv1);
@@ -9,33 +10,39 @@
     padding: 0;
 }
 
-/* body {
-    background-image: url("../image/goku-dragon-ball-z-16661-1920x1200.jpg");
-    background-size: cover;
-} */
-
+/****************************************** container nom joueur(s) **************************************/
 .Container_Nom_joueurs {
-    width: 100%;
     height: 100vh;
-    background-image: url("../image/goku-dragon-ball-z-16661-1920x1200.jpg");
+    background-image: url("../image/gohan.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
-
 }
 
+.container_display {
+    display: flex;
+    width: 54%;
+    height: 42em;
+    flex-direction: column;
+}
+
+/* titre */
+.Container_titre {
+    display: flex;
+    justify-content: flex-start;
+}
 .Morpion {
-    position: absolute;
-    font-size: 9vw;
-  }
-  
-  .Mor {
+    font-size: 10vw;
+}
+
+.Mor {
     color: #fef400;
     text-transform: uppercase;
     -webkit-text-stroke: 0.2vw #000000;
-    left: 0.7em;
-  }
-  
-  .Pion {
-    left: 2.2em;
+}
+
+.Pion {
     color: #ef2121;
     text-transform: uppercase;
     -webkit-text-stroke: 0.2vw #000000;
@@ -43,74 +50,57 @@
 
 .Mor1 {
     transform-origin: 50% 44px;
-    transform: translate(125.5231px, 46.19540000000001px) rotate(0.1885rad);
+    transform: translate(261%, 28%) rotate(0.1885rad);
     z-index: 1;
 }
 
 .Mor2 {
     transform-origin: 50% 44px;
-    transform: translate(194.0053px, 58.988px) rotate(0.192477rad);
-    background: linear-gradient(185deg, rgba(0, 0, 0, 0) 37%, rgb(255, 4, 4) 36%, rgb(250, 0, 0) 48%, rgba(0, 0, 0, 0) 31%);
+    transform: translate(299%, 38%) rotate(0.192477rad);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 26%, rgb(255, 4, 4) 42%, rgb(250, 0, 0) 49%, rgba(0, 0, 0, 0) 35%);
 }
 
 .Mor3 {
     transform-origin: 50% 44px;
-    transform: translate(247.9934px, 57.573499999999996px) rotate(0.073365rad);
+    transform: translate(355%, 34%) rotate(0.073365rad);
     z-index: 0;
 }
 
 .Pion1 {
     transform-origin: 50% 44px;
-    transform: translate(97.2766px, 56.0703px) rotate(-0.045856rad);
+    transform: translate(356%, 34%) rotate(-0.045856rad);
     z-index: 1;
 }
 
 .Pion2 {
     transform-origin: 50% 44px;
-    transform: translate(143.1035px, 56.82310000000001px) rotate(6.1808rad);
+    transform: translate(572%, 34%) rotate(6.1808rad);
     z-index: 1;
 }
 
 .Pion3 {
     transform-origin: 50% 44px;
-    transform: translate(160.20069999999998px, 53.38720000000001px) rotate(-0.267918rad);
-    z-index: 0;
+    transform: translate(237%, 37%) rotate(-0.267918rad);
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 26%, rgb(0, 0, 0) 42%, rgb(250, 0, 0) 49%, rgba(0, 0, 0, 0) 35%);
 }
 
 .Pion4 {
     transform-origin: 50% 44px;
-    transform: translate(214.4029px, 42.59440000000001px) rotate(6.0125rad);
-    z-index: 0;
+    transform: translate(246%, 30%) rotate(6.0125rad);
+    z-index: 1;
 }
 
-/* .container {
-    display: flex;
-} */
-
-.ContainerBoutton2 {
-    display: flex;
-    padding-left: 4.3%;
-    margin-top: 1em;
-}
-
+/* <!-- Sous titre  --> */
 .nbJoueurs {
     display: flex;
-    color: white;
-    font-size: 3em;
-    padding-top: 16.5%;
-    padding-left: 12%;
+    font-size: 3.4vw;
+    padding-top: 2.5%;
 }
 
-.joueurs {
-    font-size: 2em;
+.container {
     display: flex;
-    cursor: grab; 
+    flex-direction: column;
     align-items: center;
-    border-radius: 10px;
-    width: 8em;
-    justify-content: center;
-    margin: 0.5em;
 }
 
 #NOm {
@@ -136,13 +126,43 @@
 
 }
 
-/*  */
+/* <!-- Boutton Jouer seul ou a deux --> */
+.ContainerBoutton2 {
+    display: flex;
+    margin-top: 1em;
+    width: 42vw;
+    justify-content: center;
+}
+
+.joueurs {
+    font-size: 2.5vw;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    width: 60%;
+    justify-content: center;
+    margin: 1.5%;
+}
+
+.one {
+    width: 4vw;
+    padding-right: 2%;
+}
+
+.two {
+    width: 8vw;
+    padding-right: 2%;
+}
+
+/* <!-- Choix du nom des joueurs --> */
 .ContainerJ1 {
     display: flex;
+    align-items: center;
 }
 
 .ContainerJ2 {
     display: flex;
+    align-items: center;
     margin-left: 7%;
 }
 
@@ -150,6 +170,13 @@
     width: 57vw;
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+.Container_input {
+    display: flex;
+    width: 23vw;
+    margin-top: 2%;
     align-items: center;
 }
 
@@ -176,13 +203,14 @@ label {
     justify-content: center;
 }
 
+/* <!-- bouton choisir personnage --> */
 .Boutton {
     background: linear-gradient(to right, #fef400, #ef7021, #ef2121);
     text-decoration: none;
     width: 25vw;
     color: black;
     height: 9vh;
-    font-size: 2em;
+    font-size: 2vw;
     border: 3px solid black;
     display: flex;
     align-items: center;
@@ -198,25 +226,55 @@ label {
 
 .but {
     margin-left: 29%;
-    margin-top: 4%;}
+    margin-top: 4%;
+}
 
-/*  */
-
+/* <!--/*************************** Pop up choix du personnage *******************************************/
 .container_Icone_joueurs {
     display: flex;
     width: 51vw;
-    height: 40em;
+    height: 100vh;
     background-color: white;
     background-image: url("../image/shenron1.png");
     background-size: cover;
     position: absolute;
-    bottom: 1%;
-    left: 2%;
+    bottom: 0;
+    left: 0;
     border-radius: 10px;
     border: #000000 solid 10px;
     z-index: 2;
 }
 
+.NJoueurs {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+/* <!-- Joueur 1 --> */
+.Perso1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 35%;
+}
+
+.nom {
+    font-size: 2em;
+}
+
+/* <!-- button choix personnage --> */
+.btn_perso, .btn_perso2 {
+    border: 3px solid black;
+    background-color: #d6da05;
+    width: 14vw;
+    border-radius: 10px;
+    height: 1.5em;
+    margin-bottom: 2%;
+    font-size: 2vw;
+}
+
+/* <!-- Boutton play et retour --> */
 .Container_play {
     width: 30%;
     display: flex;
@@ -239,41 +297,6 @@ label {
     margin-bottom: 4%;
 }
 
-.NJoueurs {
-    display: flex;
-    align-items: center;
-    width: 100%;
-}
-
-.nom {
-    font-size: 2em;
-}
-
-.Perso1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 35%;
-}
-
-.Perso2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 35%;
-
-}
-
-.btn_perso, .btn_perso2 {
-    border: 3px solid black;
-    background-color: #d6da05;
-    width: 14vw;
-    border-radius: 10px;
-    height: 1.5em;
-    margin-bottom: 2%;
-    font-size: 2em;
-}
-
 .but_popUp:hover {
     background: linear-gradient(to right, #0a5312, #21a12e, #4a9852);
 }
@@ -282,35 +305,100 @@ label {
     background-color: #d6da05 !important;
 }
 
+/* <!-- Joueur 2 --> */
+.Perso2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 35%;
+}
 
-
-/*  */
-
+/* <!--/********************************* Container jeu morpion ****************************************/
 .container_morpion {
-    background-image: url("../image/43c9653e3a717d4a80a0551ebec6c978.png");
+    background-image: url("../image/Morpion.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
+    background-color: #464646;
     height: 100vh;
     width: 100%;
 }
-.Nom {
-    font-size: 3em;
-    font-weight: bold;
 
-}
-
-#Container_nom {
-    height: 15em;
+/* <!-- Container nom joueur --> */
+#Container_prenom {
+    height: 9em;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    z-index: 0;
 }
 
+.Nom, .Nom2, .Nom1 {
+    font-size: 3em;
+    font-weight: bold;
+    width: 5em;
+    text-align: center;
+}
+
+/* <!--nom joueur1 --> */
+.Nom {
+    color:#d6da05;
+}
+
+/* <!--nom joueur actuelle --> */
+.Nom1 {
+    width: 7em;
+}
+
+/* <!--nom joueur2 --> */
+.Nom2 {
+    color:#d00c02;
+}
+
+/* contianer jeu */
+.Container_jeux {
+    display: flex;
+    width: 100%;
+}
+
+/* <!-- perso1 --> */
+.Personnage1 {
+    position: absolute;
+    left: 3%;
+    z-index: 1;
+    bottom: 2%;
+}
+
+.Personnage1 img {
+    max-height: 40vw;
+}
+
+/* <!-- perso2 --> */
+.Personnage2 {
+    position: absolute;
+    z-index: 1;
+    bottom: 2%;
+    right: 4%;
+}
+
+.Personnage2 img {
+    max-height: 40vw;
+}
+
+.ImageJ2 {
+    transform: scaleX(-1);
+}
+
+/* <!-- container jeu morpion --> */
 .span {
-    width: 13vw;
+    width: 10em;
     height: 8em;
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 0;
+    background-color: transparent;
 }
 
 .span2 {
@@ -338,24 +426,26 @@ label {
     "button4 button5 button6"
     "button7 button8 button9";
     justify-content: center;
+    width: 100%;
 }
 
+/* <!-- pop up résultat --> */
 .container_resultat {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 40vw;
-    height: 35em;
-    background-color: beige;
-    background-image: url("../image/9f6110fd84dd0c6f2c4d9fd37295e125b2.jpg") ; 
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../image/PopUpResultat.jpg") ; 
     background-size: cover;   
     position: absolute;
-    bottom: 4%;
-    left: 30%;
+    bottom: 0;
+    left: 0;
     border-radius: 10px;
     border: 10px solid #000000; 
 }
 
+/* <!-- titre pop up --> */
 #LeGagn {
     color: #fef400;
 }
@@ -371,7 +461,7 @@ h2 {
     display: flex;
 }
 
-
+/* <!-- Nom gagant --> */
 .Nom_gagnant {
     width: 30vw;
     height: 1em;
@@ -382,20 +472,265 @@ h2 {
     justify-content: center;
 }
 
+/* <!-- texte du personnage gagnant --> */
 .text {
-    height: 17em;
-    width: 30vw;
+    height: 7em;
+    width: 60vw;
     border: black solid;
+    font-size: 2em;
+    text-align: center;
+    padding: 3%;
 }
 
-.Rejouer {
+/* <!-- button rejouer --> */
+.BtnPopUpResultat {
     width: 17vw;
     height: 2em;
     background: linear-gradient(to right, #fef400, #ef7021, #ef2121);
     font-size: 1.5em;
     border-radius: 10px;
+    margin-top: 6%;
 }
 
-.Rejouer:hover {
+.BtnPopUpResultat:hover {
     background: linear-gradient(to right, #ef2121, #ef7021, #fef400);
+}
+
+/* ****************************** responsive ****************************************************** */
+@media screen and (max-width: 1200px) {
+    .Nom, .Nom2, .Nom1 {
+        font-size: 2em;
+        font-weight: bold;
+    }
+}
+
+@media screen and (max-width: 990px) {
+
+    .text {
+        font-size: 1.5em;
+    }
+    
+    .Nom_gagnant {
+        font-size: 2em;
+    }
+
+    .nbJoueurs {
+        font-size: 4vw;
+        padding-top: 11.5%;
+    }
+
+    .joueurs {
+        height: 6vh;
+        font-size: 4.5vw;
+}
+    label {
+        margin-right: 7%;
+    }
+
+    .ContainerJ2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 24vw;
+    }
+    .ContainerBoutton2 {
+        display: flex;
+        width: 64vw;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+    }
+    #J1, #j1, #j2 {
+        width: 27vw;
+        height: 7vh;
+        margin-right: 7%;
+    }
+
+    .Container_input1 {
+        margin-left: 32%;
+        margin-bottom: 4%;
+        margin-top: 4%;
+    }
+
+    .but {
+        margin-top: 9%;
+        margin-left: 36%;
+    }
+    .Boutton {
+        width: 18vw;
+        height: 7vh;
+    }
+    .TwoJoueurs {
+        width: 54vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .container_Icone_joueurs {
+        width: 100vw;
+        height: 100vw;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    .but_popUp {
+        width: 21vw;
+    }
+    .btn_perso, .btn_perso2 {
+        width: 27vw;
+        height: 5vh;
+
+    }
+
+    .NJoueurs {
+        margin-top: 8%;
+    }
+}
+
+@media screen and (max-width: 815px) {
+    .container_Icone_joueurs {
+        width: 100vw;
+        height: 100vh;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    
+}
+
+@media screen and (max-width: 587px) {
+    .span {
+        width: 7em;
+        height: 6em;
+    }
+
+    .Morpion {
+        font-size: 25vw;
+    }
+    
+    .Mor1 {
+        transform-origin: 50% 44px;
+        transform: translate(-48%, -6%) rotate(0.1885rad);
+        z-index: 1;
+    }
+
+    .Mor2 {
+        transform-origin: 50% 44px;
+        transform: translate(-79%, -1%) rotate(0.192477rad);
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 26%, rgb(255, 4, 4) 42%, rgb(250, 0, 0) 49%, rgba(0, 0, 0, 0) 35%);
+    }
+
+    .Mor3 {
+        transform-origin: 50% 44px;
+        transform: translate(-120%, -1%) rotate(0.073365rad);
+        z-index: 0;
+    }
+
+    .Pion1 {
+        transform-origin: 50% 44px;
+        transform: translate(-150%, -1%) rotate(-0.045856rad);
+        z-index: 1;
+    }
+
+    .Pion2 {
+        transform-origin: 50% 44px;
+        transform: translate(-267%, -1%) rotate(6.1808rad);
+        z-index: 1;
+    }
+
+    .Pion3 {
+        transform-origin: 50% 44px;
+        transform: translate(-146%, -1%) rotate(-0.267918rad);
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 26%, rgb(0, 0, 0) 42%, rgb(250, 0, 0) 49%, rgba(0, 0, 0, 0) 35%);
+    }
+
+    .Pion4 {
+        transform-origin: 50% 44px;
+        transform: translate(-179%, -5%) rotate(6.0125rad);
+        z-index: 1;
+    }
+    
+
+    .container_display {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .Container_titre {
+        margin-left: 21%;
+        margin-top: 10%;
+    }
+    .ContainerBoutton2 {
+        margin-top: 6%;
+    }
+    .container {
+        margin-top: 4%;
+    }
+
+    .TwoJoueurs {
+        width: 100vw;
+    }
+
+    .Boutton {
+        width: 30vw;
+        height: 7vh;
+    }
+    .ContainerJ2 {
+        width: 60vw;
+        margin-top: 8%;
+    }
+    .Container_input1 {
+        margin-left: 11%;
+        margin-bottom: 4%;
+        margin-top: 4%;
+    }
+
+    .nbJoueurs{
+        font-size: 10vw;
+        padding-top: 0.5%;
+    }    
+
+    #J1, #j1, #j2 {
+        width: 49vw;
+        height: 5vh;
+    }
+    .container_Icone_joueurs {
+        width: 100vw;
+        height: 100vh;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        }
+
+    .Container_input {
+        width: 47vw;
+    }
+
+    .Container_input1 {
+        margin-left: 15%;
+        margin-bottom: 4%;
+        margin-top: 4%;
+    }
+
+    .container_boutton {
+        margin-top: 25%;
+    }
+
+    .Nom, .Nom2, .Nom1 {
+        font-size: 1.5em;
+    }
+
+    .joueurs {
+        width: 85%;
+
+    }
+    .but_popUp {
+        width: 21vw;
+    }
+    .btn_perso, .btn_perso2 {
+            width: 27vw;
+            height: 5vh;
+        font-size: 4vw;
+        
+    }
 }

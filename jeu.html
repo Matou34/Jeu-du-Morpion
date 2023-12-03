@@ -2,145 +2,178 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Découvrez le morpion Dragon Ball : affrontez Goku, Vegeta, Gohan et d'autres personnages emblématiques dans ce jeu de stratégie. Choisissez votre camp, tracez votre chemin vers la victoire et revivez l'épopée de Dragon Ball à travers ce défi tactique passionnant !">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-            <!--------bootsrap------->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"   
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
-        crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
-        crossorigin="anonymous"></script> 
-
+    <title>jeu Morpion</title>
+    <!--/******************bootsrap*************************/-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"   
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+    crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+    crossorigin="anonymous"></script> 
     <!--/******************CSS*********************************/-->
     <link rel="stylesheet" href="./CSS/jeu.css">
-    <link rel="stylesheet" href="./CSS/morpion.css">
     <!--/******************JS*********************************/-->
     <script src="./JS/script.js" defer></script>
-    <script src="./JS/morpion.js" defer></script>
-    <!-- JQUERY -->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-
 </head>
 <body>
-    <div class="Container_Nom_joueurs">
-        <div>
-            <span class="Morpion Mor1 Mor">M</span>
-            <span class="Morpion Mor2 Mor">o</span>
-            <span class="Morpion Mor3 Mor">r</span>
-            <span class="Morpion Pion1 Pion">p</span>
-            <span class="Morpion Pion2 Pion">i</span>
-            <span class="Morpion Pion3 Pion">o</span>
-            <span class="Morpion Pion4 Pion">n</span>
-        </div>
-    
-        <div class="container">
-            <div>
+<!--/*************************** Container choix Nom joueur et choix mode de jeux ***********************/-->
+    <main class="Container_Nom_joueurs">
+        <div class="container_display">
+            <!-- Titre -->
+            <section class="Container_titre">
+                <span class="Morpion Mor1 Mor">M</span>
+                <span class="Morpion Mor2 Mor">o</span>
+                <span class="Morpion Mor3 Mor">r</span>
+                <span class="Morpion Pion1 Pion">p</span>
+                <span class="Morpion Pion2 Pion">i</span>
+                <span class="Morpion Pion3 Pion">o</span>
+                <span class="Morpion Pion4 Pion">n</span>
+            </section>
+
+            <section class="container">
+                <!-- Sous titre  -->
                 <p class="nbJoueurs">
                     <span id="NOm">Nom</span>
-                    <span id="bres">bres</span>
+                    <span id="bres">bre</span>
                     <span id="de"> de</span>
                     <span id="jou"> jou</span>
-                    <span id="eurs">eurs</span>
+                    <span id="eurs">eur(s)</span>
                 </p>
-            </div>
-            <div class="ContainerBoutton2">
-                <button type="button" id="OneJoueur" class="joueurs"><img src="./image/boule1.svg" alt="" width="52">joueur</button>
-                <button type="button" id="TwoJoueurs" class="joueurs"><img src="./image/boule1&2.png" alt="" width="109">joueurs</button>
-            </div>
-        </div>
-        <section class="OneJoueur ">
-            <div class="ContainerJ1">
-                <label for="J1"><img src="./image/boule1.svg" alt="" width="52"></label>
-                <input id="J1" type="text">    
-            </div>
-            <a href="./morpion.html" class="Boutton">Play</a>
-        </section>
-        <section class="TwoJoueurs">
-            <div class="ContainerJ2">
-                <label for="j1"><img src="./image/boule1.svg" alt="" width="52"></label>
-                <input id="j1" class="jo" type="text" value="">
-                <label for="j2"><img src="./image/boule1&2.png" alt="" width="109"></label>
-                <input id="j2" class="jo" type="text" value="">
-            </div>
-    
-            <button class="Boutton but">Choisir son personnage</button>
-        </section>    
-    </div>
 
-    <div class="container_Icone_joueurs">
+                <!-- Boutton Jouer seul ou a deux -->
+                <div class="ContainerBoutton2">
+                    <button type="button" id="OneJoueur" class="joueurs" disabled><img class="one" src="./image/boule1.svg">joueur</button>
+                    <button type="button" id="TwoJoueurs" class="joueurs"><img class="two" src="./image/boule1&2.png">joueurs</button>
+                </div>
+            </section>
+
+            <!-- Choix du nom des joueurs pour mode contre l'ordi -->
+            <section class="OneJoueur ">
+                <div class="ContainerJ1">
+                    <label for="J1"><img class="one" src="./image/boule1.svg"></label>
+                    <input id="J1" type="text">    
+                </div>
+                <a href="./morpion.html" class="Boutton">Play</a>
+            </section>
+                    
+            <!-- choix du nom des joueurs pour mode 1/1 -->
+            <section class="TwoJoueurs">
+                <div class="ContainerJ2">
+                    <div class="Container_input Container_input1">
+                        <label for="j1"><img class="one" src="./image/boule1.svg"></label>
+                        <input id="j1" class="jo" type="text" value="">
+                    </div>
+                    <div class="Container_input">
+                        <label for="j2" ><img class="two" src="./image/boule1&2.png"></label>
+                        <input id="j2" class="jo" type="text" value="">
+                    </div>
+                </div>
+                <!-- bouton choisir personnage -->
+                <button class="Boutton but">Choisir son personnage</button>
+            </section>    
+        </div>
+    </main>
+
+<!--/*************************** Pop up choix du personnage *******************************************/-->
+    <section class="container_Icone_joueurs">
         <div class="NJoueurs">
+            <!-- Joueur 1 -->
             <div class="Perso1">
+                <!-- Nom joueur 1 -->
                 <p class="nomJ1 nom"></p>
-                <button id="Goku" class="btn_perso">Goku</button>
-                <button id="Vegeta" class="btn_perso">Vegeta</button>
-                <button id="Gohan" class="btn_perso">Gohan</button>
-                <button id="Freezer" class="btn_perso">Freezer</button>
-                <button id="trunks" class="btn_perso">trunks</button>
-                <button id="piccolo" class="btn_perso">piccolo</button>
-                <button id="krilin" class="btn_perso">krilin</button>
-                <button id="beerus" class="btn_perso">beerus</button>
-                <button id="Mr_satan" class="btn_perso">Mr satan</button>
-                <button id="zen_zen" class="btn_perso">zen zen</button>
+                <!-- button choix personnage -->
+                <button name="goku" class="btn_perso">Goku</button>
+                <button name="vegeta" class="btn_perso">Vegeta</button>
+                <button name="gohan" class="btn_perso">Gohan</button>
+                <button name="freezer" class="btn_perso">Freezer</button>
+                <button name="trunks" class="btn_perso">trunks</button>
+                <button name="piccolo" class="btn_perso">piccolo</button>
+                <button name="krillin" class="btn_perso">krilin</button>
+                <button name="beerus" class="btn_perso">beerus</button>
+                <button name="satan" class="btn_perso">Mr satan</button>
+                <button name="zenzen" class="btn_perso">zen zen</button>
             </div>
+
+            <!-- Boutton play et retour -->
             <div class="Container_play">
-                <button class="boutton_play but_popUp">Play</button>
+                <button class="boutton_play but_popUp" disabled>Play</button>
                 <button class="boutton_retour but_popUp">Retour</button>
             </div>
+
+            <!-- Joueur 2 -->
             <div class="Perso2">
+                <!-- Nom joueur 2 -->
                 <p class="nomJ2 nom"></p>
-                <button id="Goku2" class="btn_perso2">Goku</button>
-                <button id="Vegeta2" class="btn_perso2">Vegeta</button>
-                <button id="Gohan2" class="btn_perso2">Gohan</button>
-                <button id="Freezer2" class="btn_perso2">Freezer</button>
-                <button id="trunks2" class="btn_perso2">trunks</button>
-                <button id="piccolo2" class="btn_perso2">piccolo</button>
-                <button id="krilin2" class="btn_perso2">krilin</button>
-                <button id="beerus2" class="btn_perso2">beerus</button>
-                <button id="Mr_satan2" class="btn_perso2">Mr satan</button>
-                <button id="zen_zen2" class="btn_perso2">zen zen</button>
+                <!-- button choix personnage -->
+                <button name="goku" class="btn_perso2">Goku</button>
+                <button name="vegeta" class="btn_perso2">Vegeta</button>
+                <button name="gohan" class="btn_perso2">Gohan</button>
+                <button name="freezer" class="btn_perso2">Freezer</button>
+                <button name="trunks" class="btn_perso2">trunks</button>
+                <button name="piccolo" class="btn_perso2">piccolo</button>
+                <button name="krillin" class="btn_perso2">krilin</button>
+                <button name="beerus" class="btn_perso2">beerus</button>
+                <button name="satan" class="btn_perso2">Mr satan</button>
+                <button name="zenzen" class="btn_perso2">zen zen</button>
             </div>
         </div>
-        
-    </div>
+    </section>
 
+<!--/********************************* Container jeu morpion ***************************************/-->
     <main class="container_morpion">
-        <section id="Container_nom">
+        <!-- Container nom joueur -->
+        <section id="Container_prenom">
+            <!--nom joueur1 -->
             <div>
                 <p class="Nom" id="Blaze"></p>
             </div>
+            <!--nom joueur actuelle -->
             <div>
                 <p class="Nom1" id="Blaze3"></p>
             </div>
+            <!--nom joueur2 -->
             <div>
                 <p class="Nom2" id="Blaze2"></p>
             </div>    
         </section>
-    
-        <section class="container_boutton">
-            <span class="span1 span" id="b1"></span>
-            <span class="span1 span" id="b2"></span>
-            <span class="span1 span" id="b3"></span>
-            <span class="span2 span" id="b4"></span>
-            <span class="span2 span" id="b5"></span>
-            <span class="span2 span" id="b6"></span>
-            <span class="span3 span" id="b7"></span>
-            <span class="span3 span" id="b8"></span>
-            <span class="span3 span" id="b9"></span>    
+
+        <section class="Container_jeux">
+            <!-- perso1 -->
+            <div class="Personnage1"></div>
+            <!-- container jeu morpion -->
+            <section class="container_boutton">
+                <button type="button" class="span1 span" id="b1"></button>
+                <button type="button" class="span1 span" id="b2"></button>
+                <button type="button" class="span1 span" id="b3"></button>
+                <button type="button" class="span2 span" id="b4"></button>
+                <button type="button" class="span2 span" id="b5"></button>
+                <button type="button" class="span2 span" id="b6"></button>
+                <button type="button" class="span3 span" id="b7"></button>
+                <button type="button" class="span3 span" id="b8"></button>
+                <button type="button" class="span3 span" id="b9"></button>    
+            </section>
+            <!-- perso2 -->
+            <div class="Personnage2"></div>
         </section>
-    
+
+        <!-- pop up résultat -->
         <section class="container_resultat">
+            <!-- titre pop up -->
             <h2>
                 <span id="LeGagn">Le gagn</span><span id="antEst">ant est:</span>
             </h2>
+            <!-- Nom gagant -->
             <div class="Container_nom_gagant">
                 <p class="Nom_gagnant"></p>
             </div>
+            <!-- texte du personnage gagnant -->
             <p class="text"></p>
-            <a href="./morpion.html"><button class="Rejouer">Rejouer</button></a>
+            <!-- button rejouer -->
+            <button id="Rejouer" class="Rejouer BtnPopUpResultat">Rejouer</button>
+            <a href="./jeu.html"><button class="retour BtnPopUpResultat">Retour</button></a>
         </section>
     </main>
-
-
 </body>
 </html>

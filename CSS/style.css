@@ -9,25 +9,44 @@
 }
 
 body {
-  position: absolute;
-  background-image: url("../image/goku\ accueil.jpg");
+  display: flex;
+  justify-content: flex-start;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
+  background-image: url("../image/goku\ accueil.jpg");
+  width: 100%;
+}
+
+.ContainerAccueil {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* titre */
+.titre {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.boutton {
+  display: flex;
+    justify-content: flex-end;
+    margin: 12%;
 }
 
 .Morpion {
-  position: absolute;
-  font-size: 11vw;
-}
+  font-size: 10vw;}
 
 .Mor {
   color: #fef400;
   text-transform: uppercase;
   -webkit-text-stroke: 0.2vw #000000;
-  left: 5.5em;
 }
 
 .Pion {
-  left: 7em;
   color: #ef2121;
   text-transform: uppercase;
   -webkit-text-stroke: 0.2vw #000000;
@@ -35,61 +54,56 @@ body {
 
 .Mor1 {
   transform-origin: 50% 44px;
-  transform: translate(89.5231px, 134.1954px) rotate(0.1885rad);
+  transform: translate(1071%, 84%) rotate(0.1885rad);
+  z-index: 1;
 }
 
 .Mor2 {
   transform-origin: 50% 44px;
-  transform: translate(167.0053px, 151.988px) rotate(0.192477rad);
-  z-index: 1;
-  background: rgb(0, 0, 0);
+  transform: translate(1300%, 92%) rotate(0.192477rad);
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 26%, rgb(255, 4, 4) 42%, rgb(250, 0, 0) 49%, rgba(0, 0, 0, 0) 35%);
 }
 
 .Mor3 {
   transform-origin: 50% 44px;
-  transform: translate(237.9934px, 145.5735px) rotate(0.073365rad);
+  transform: translate(1618%, 91%) rotate(0.073365rad);
   z-index: 0;
 }
 
 .Pion1 {
   transform-origin: 50% 44px;
-  transform: translate(55.2766px, 146.0703px) rotate(-0.045856rad);
+  transform: translate(1687%, 90%) rotate(-0.045856rad);
   z-index: 1;
 }
 
 .Pion2 {
   transform-origin: 50% 44px;
-  transform: translate(102.1035px, 142.8231px) rotate(6.1808rad);
-  z-index: 0;
+  transform: translate(2832%, 90%) rotate(6.1808rad);
+  z-index: 1;
 }
 
 .Pion3 {
   transform-origin: 50% 44px;
-  transform: translate(122.2007px, 150.3872px) rotate(-0.267918rad);
-  z-index: 1;
-  background: rgb(0, 0, 0);
+  transform: translate(1256%, 91%) rotate(-0.267918rad);
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 26%, rgb(0, 0, 0) 42%, rgb(250, 0, 0) 49%, rgba(0, 0, 0, 0) 35%);
 }
 
 .Pion4 {
   transform-origin: 50% 44px;
-  transform: translate(188.4029px, 132.5944px) rotate(6.0125rad);
-  z-index: 0;
+  transform: translate(1400%, 81%) rotate(6.0125rad);
+  z-index: 1;
 }
 
+/* boutton play */
 .Boutton {
   background: linear-gradient(to right, #fef400, #ef7021, #ef2121);
   text-decoration: none;
   width: 17vw;
   color: black;
-  height: 13vh;
-  top: 7em;
-  position: absolute;
-  font-size: 3em;
+  height: 1.8em;
+  font-size: 3vw;
   border: 3px solid black;
   display: flex;
-  left: 22em;
   align-items: center;
   justify-content: center;
   border-radius: 10px;
@@ -98,4 +112,124 @@ body {
 
 .Boutton:hover {
   background: linear-gradient(to right, #ef2121, #ef7021, #fef400);
+}
+
+
+/* **************************************responsive ************************************************/
+@media screen and (max-width: 715px) {
+  body {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  background-image: url("../image/AccueilResponsive.jpg");
+
+  }
+
+  .Morpion {
+    font-size: 25vw;}
+  
+
+  .Mor1 {
+    transform-origin: 50% 44px;
+    transform: translate(100%, 84%) rotate(0.1885rad);
+    z-index: 1;
+  }
+  
+  .Mor2 {
+    transform-origin: 50% 44px;
+    transform: translate(100%, 92%) rotate(0.192477rad);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 26%, rgb(255, 4, 4) 42%, rgb(250, 0, 0) 49%, rgba(0, 0, 0, 0) 35%);
+  }
+  
+  .Mor3 {
+    transform-origin: 50% 44px;
+    transform: translate(100%, 91%) rotate(0.073365rad);
+    z-index: 0;
+  }
+  
+  .Pion1 {
+    transform-origin: 50% 44px;
+    transform: translate(100%, 90%) rotate(-0.045856rad);
+    z-index: 1;
+  }
+  
+  .Pion2 {
+    transform-origin: 50% 44px;
+    transform: translate(146%, 90%) rotate(6.1808rad);
+    z-index: 1;
+  }
+  
+  .Pion3 {
+    transform-origin: 50% 44px;
+    transform: translate(46%, 91%) rotate(-0.267918rad);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 26%, rgb(0, 0, 0) 42%, rgb(250, 0, 0) 49%, rgba(0, 0, 0, 0) 35%);
+  }
+  
+  .Pion4 {
+    transform-origin: 50% 44px;
+    transform: translate(34%, 81%) rotate(6.0125rad);
+    z-index: 1;
+  }
+  .Boutton {
+    width: 40vw;
+    height: 4em;
+    margin-right: 29%;
+    margin-top: 40%;
+  }
+}
+
+@media screen and (max-width: 587px) {
+
+  .Morpion {
+    font-size: 25vw;}
+  
+
+  .Mor1 {
+    transform-origin: 50% 44px;
+    transform: translate(100%, 84%) rotate(0.1885rad);
+    z-index: 1;
+  }
+  
+  .Mor2 {
+    transform-origin: 50% 44px;
+    transform: translate(100%, 92%) rotate(0.192477rad);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 26%, rgb(255, 4, 4) 42%, rgb(250, 0, 0) 49%, rgba(0, 0, 0, 0) 35%);
+  }
+  
+  .Mor3 {
+    transform-origin: 50% 44px;
+    transform: translate(100%, 91%) rotate(0.073365rad);
+    z-index: 0;
+  }
+  
+  .Pion1 {
+    transform-origin: 50% 44px;
+    transform: translate(100%, 90%) rotate(-0.045856rad);
+    z-index: 1;
+  }
+  
+  .Pion2 {
+    transform-origin: 50% 44px;
+    transform: translate(146%, 90%) rotate(6.1808rad);
+    z-index: 1;
+  }
+  
+  .Pion3 {
+    transform-origin: 50% 44px;
+    transform: translate(46%, 91%) rotate(-0.267918rad);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 26%, rgb(0, 0, 0) 42%, rgb(250, 0, 0) 49%, rgba(0, 0, 0, 0) 35%);
+  }
+  
+  .Pion4 {
+    transform-origin: 50% 44px;
+    transform: translate(34%, 81%) rotate(6.0125rad);
+    z-index: 1;
+  }
+  .Boutton {
+    width: 40vw;
+    height: 4em;
+    margin-right: 29%;
+    margin-top: 40%;
+}
 }
