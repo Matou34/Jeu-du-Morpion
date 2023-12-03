@@ -484,13 +484,23 @@ h2 {
 
 /* <!-- button rejouer --> */
 .BtnPopUpResultat {
+    border: #000000 solid 1px;
+    text-decoration: none;
+    color: #000000;
+    text-align: center;
     width: 17vw;
     height: 2em;
     background: linear-gradient(to right, #fef400, #ef7021, #ef2121);
     font-size: 1.5em;
     border-radius: 10px;
+    margin-bottom: 3%;
+}
+
+.Rejouer {
     margin-top: 6%;
 }
+
+
 
 .BtnPopUpResultat:hover {
     background: linear-gradient(to right, #ef2121, #ef7021, #fef400);

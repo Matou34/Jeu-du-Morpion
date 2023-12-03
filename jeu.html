@@ -19,7 +19,7 @@
 </head>
 <body>
 <!--/*************************** Container choix Nom joueur et choix mode de jeux ***********************/-->
-    <main class="Container_Nom_joueurs">
+    <section class="Container_Nom_joueurs">
         <div class="container_display">
             <!-- Titre -->
             <section class="Container_titre">
@@ -44,15 +44,15 @@
 
                 <!-- Boutton Jouer seul ou a deux -->
                 <div class="ContainerBoutton2">
-                    <button type="button" id="OneJoueur" class="joueurs" disabled><img class="one" src="./image/boule1.svg">joueur</button>
-                    <button type="button" id="TwoJoueurs" class="joueurs"><img class="two" src="./image/boule1&2.png">joueurs</button>
+                    <button type="button" id="OneJoueur" class="joueurs" disabled><img class="one" src="./image/boule1.svg" alt="dragon ball">joueur</button>
+                    <button type="button" id="TwoJoueurs" class="joueurs"><img class="two" src="./image/boule1&2.png" alt="dragon ball">joueurs</button>
                 </div>
             </section>
 
             <!-- Choix du nom des joueurs pour mode contre l'ordi -->
             <section class="OneJoueur ">
                 <div class="ContainerJ1">
-                    <label for="J1"><img class="one" src="./image/boule1.svg"></label>
+                    <label for="J1"><img class="one" src="./image/boule1.svg" alt="dragon ball"></label>
                     <input id="J1" type="text">    
                 </div>
                 <a href="./morpion.html" class="Boutton">Play</a>
@@ -62,11 +62,11 @@
             <section class="TwoJoueurs">
                 <div class="ContainerJ2">
                     <div class="Container_input Container_input1">
-                        <label for="j1"><img class="one" src="./image/boule1.svg"></label>
+                        <label for="j1"><img class="one" src="./image/boule1.svg" alt="dragon ball"></label>
                         <input id="j1" class="jo" type="text" value="">
                     </div>
                     <div class="Container_input">
-                        <label for="j2" ><img class="two" src="./image/boule1&2.png"></label>
+                        <label for="j2" ><img class="two" src="./image/boule1&2.png" alt="dragon ball"></label>
                         <input id="j2" class="jo" type="text" value="">
                     </div>
                 </div>
@@ -74,7 +74,7 @@
                 <button class="Boutton but">Choisir son personnage</button>
             </section>    
         </div>
-    </main>
+    </section>
 
 <!--/*************************** Pop up choix du personnage *******************************************/-->
     <section class="container_Icone_joueurs">
@@ -172,7 +172,7 @@
             <p class="text"></p>
             <!-- button rejouer -->
             <button id="Rejouer" class="Rejouer BtnPopUpResultat">Rejouer</button>
-            <a href="./jeu.html"><button class="retour BtnPopUpResultat">Retour</button></a>
+            <a href="./jeu.html" class="retour BtnPopUpResultat">Retour</a>
         </section>
     </main>
 </body>
